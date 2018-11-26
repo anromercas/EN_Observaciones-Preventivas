@@ -1,0 +1,45 @@
+<div class="row">
+  <div class="col-lg-12 col-xlg-12 col-md-12 col-sm-12">
+    <div class="stickyside">
+      <div class="list-group" id="top-menu">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+          <a class="navbar-brand">Formularios</a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <li
+              class="list-group-item active"
+              *ngFor="let formulario of formularios; let i = index"
+              [class.active]="active === i"
+            >
+              <a (click)="cambiarFormulario(formulario.url, i)" class="pointer">
+                {{ formulario.nombre }}</a
+              >
+            </li>
+          </div>
+        </nav>
+      </div>
+    </div>
+  </div>
+  <div class="col-lg-12 col-xlg-12 col-md-12 col-sm-12">
+    <div class="card">
+      <div class="card-body">
+        <app-formulario *ngIf="active === 0"></app-formulario>
+        <app-mini-formacion *ngIf="active === 1"></app-mini-formacion>
+        <app-incidente *ngIf="active === 2"></app-incidente>
+        <app-procedimientos *ngIf="active === 3"></app-procedimientos>
+        <app-full-calendar *ngIf="active === 4"></app-full-calendar>
+      </div>
+    </div>
+  </div>
+</div>
