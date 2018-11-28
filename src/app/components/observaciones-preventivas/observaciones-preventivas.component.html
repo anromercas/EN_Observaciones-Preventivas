@@ -8,13 +8,13 @@ Total tareas
     <div class="col-md-12">
         <div class="text-left">
             <button routerLink="/dashboard" type="button" class="btn btn-rounded btn-outline-primary">
-                <i class="fa fa-rotate-left"> Home</i>
+                <i class="fa fa-rotate-left"> Main Menu</i>
             </button>
         </div>
         <div class="text-right">
             <button [routerLink]="['/observacion','nuevo']" type="button" class="btn waves-effect waves-light btn-rounded btn-primary">
                 <i class="fa fa-plus"></i>
-                Crear Observacion Preventiva
+                Create Preventive Observation
             </button>
         </div>
 
@@ -29,7 +29,7 @@ Total tareas
             <div class="card-body">
 
                 <input (keyup)="buscarObservacionPendienteRealizar( input.value )" #input type="text" class="form-control"
-                    placeholder="Buscar tarea...">
+                    placeholder="Search task...">
 
             </div>
         </div>
@@ -52,24 +52,24 @@ Total tareas
     <div class="col">
         <div class="card">
             <div class="card-body">
-                <h1 class="card-title">Tareas Caducadas</h1>
-                <h3 class="card-subtitle">Total tareas ( <small> {{ totalRegistros }} </small> ) </h3>
+                <h1 class="card-title">Expired Tasks</h1>
+                <h3 class="card-subtitle">Total Tasks ( <small> {{ totalRegistros }} </small> ) </h3>
 
                 <table class="table table-hover table-striped table-responsive">
                     <thead>
                         <tr>
-                            <th>Fecha</th>
-                            <th>Estado</th>
-                            <th>Usuario Asigando</th>
-                            <th>Formulario</th>
-                            <th>Zona</th>
+                            <th>Date</th>
+                            <th>State</th>
+                            <th>Assigned User</th>
+                            <th>Form</th>
+                            <th>Zone</th>
                             <th></th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr *ngFor="let observacion of observaciones">
                             <td> {{ observacion.fecha | date:'dd/MM/yyyy' }} </td>
-                            <td class="badge badge-danger"> Caducada </td>
+                            <td class="badge badge-danger"> Expired </td>
                             <td> {{ observacion.usuario.nombre + ' ' + observacion.usuario.apellido + ' ' +
                                 observacion.usuario.segundoapellido }} </td>
                             <td> {{ observacion.formulario }} </td>
@@ -77,20 +77,20 @@ Total tareas
                             <td>
                                 <button (click)="recordatorio( observacion.usuario.nombre, observacion.usuario.apellido )"
                                     type="submit" class="btn btn-warning" style="margin: 10px">
-                                    <i class="fa fa-envelope-open-o"> Recordatorio</i>
+                                    <i class="fa fa-envelope-open-o"> Reminder</i>
                                 </button>
 
                                 <button [routerLink]="['/modificar-op/', observacion._id ]" class="btn btn-primary"
                                     style="margin: 10px">
-                                    <i class="fa fa-refresh"> Reasignar</i>
+                                    <i class="fa fa-refresh"> Re asign</i>
                                 </button>
 
                             </td>
                         </tr>
                     </tbody>
                 </table>
-                <button (click)="cambiarDesde(-5, 'Pendiente Realizar')" class="btn btn-secondary">Anteriores</button>
-                <button (click)="cambiarDesde(5, 'Pendiente Realizar')" class="btn btn-secondary">Siguientes</button>
+                <button (click)="cambiarDesde(-5, 'Pendiente Realizar')" class="btn btn-secondary">Previous</button>
+                <button (click)="cambiarDesde(5, 'Pendiente Realizar')" class="btn btn-secondary">Next</button>
             </div>
         </div>
     </div>
@@ -110,7 +110,7 @@ Total tareas Pendiente Aprobacion
             <div class="card-body">
 
                 <input (keyup)="buscarObservacionPendienteRealizar( input.value )" #input type="text" class="form-control"
-                    placeholder="Buscar tarea...">
+                    placeholder="Search task...">
 
             </div>
         </div>
@@ -120,11 +120,11 @@ Total tareas Pendiente Aprobacion
 <div class="row animated bounceInRight" *ngIf="cargandoPendienteAprobacion">
     <div class="col-12">
         <div class="alert alert-warning text-center">
-            <strong>Cargando</strong>
+            <strong>Loading</strong>
             <br>
             <i class="fa fa-refresh fa-spin fa-2x"></i>
             <br>
-            <span>Espere por favor</span>
+            <span>Please Wait</span>
         </div>
     </div>
 </div>
@@ -135,18 +135,18 @@ Total tareas Pendiente Aprobacion
         <div class="card">
             <div class="card-body">
 
-                <h3 class="cardtitle">Total tareas Pentientes de Aprobacion( <small> {{
+                <h3 class="cardtitle">Total tasks Pendind Approval ( <small> {{
                         totalRegistrosPendienteAprobar }} </small> ) </h3>
 
                 <table class="table table-hover table-striped table-responsive ">
                     <thead>
                         <tr>
-                            <th>Fecha</th>
-                            <th>Estado</th>
-                            <th>Usuario Asigando</th>
-                            <th>Formulario</th>
-                            <th>Tipo</th>
-                            <th>Operaciones</th>
+                            <th>Date</th>
+                            <th>State</th>
+                            <th>Assigned User</th>
+                            <th>Form</th>
+                            <th>Tipe</th>
+                            <th></th>
                         </tr>
                     </thead>
                     <tbody>
@@ -161,26 +161,26 @@ Total tareas Pendiente Aprobacion
                             <td>
                                 <div>
                                     <button [routerLink]="['/formulario/']" class="btn btn-warning" style="margin: 2px">
-                                        <i class="fa fa-file"> Leer</i>
+                                        <i class="fa fa-file"> Read</i>
                                     </button>
 
 
                                     <button (click)="aprobarObservacion( observacionPendienteAprobacion )" type="submit"
                                         class="btn btn-success">
-                                        <i class="fa fa-check"> Validar</i>
+                                        <i class="fa fa-check"> Validate</i>
                                     </button>
 
                                     <button (click)="rechazarObservacion( observacionPendienteAprobacion )" type="submit"
                                         class="btn btn-danger" style="margin: 2px">
-                                        <i class="fa fa-window-close"> Rechazar</i>
+                                        <i class="fa fa-window-close"> Reject</i>
                                     </button>
                                 </div>
                             </td>
                         </tr>
                     </tbody>
                 </table>
-                <button (click)="cambiarDesde(-5, 'Pendiente Aprobacion')" class="btn btn-secondary">Anteriores</button>
-                <button (click)="cambiarDesde(5, 'Pendiente Aprobacion')" class="btn btn-secondary">Siguientes</button>
+                <button (click)="cambiarDesde(-5, 'Pendiente Aprobacion')" class="btn btn-secondary">Previous</button>
+                <button (click)="cambiarDesde(5, 'Pendiente Aprobacion')" class="btn btn-secondary">Next</button>
             </div>
         </div>
     </div>
@@ -198,7 +198,7 @@ Historico tareas
             <div class="card-body">
 
                 <input (keyup)="buscarObservacionPendienteRealizar( input.value )" #input type="text" class="form-control"
-                    placeholder="Buscar tarea...">
+                    placeholder="Search task...">
 
             </div>
         </div>
@@ -208,11 +208,11 @@ Historico tareas
 <div class="row animated bounceInRight" *ngIf="cargando">
     <div class="col">
         <div class="alert alert-warning text-center">
-            <strong>Cargando</strong>
+            <strong>Loading</strong>
             <br>
             <i class="fa fa-refresh fa-spin fa-2x"></i>
             <br>
-            <span>Espere por favor</span>
+            <span>Please Wait</span>
         </div>
     </div>
 </div>
@@ -221,21 +221,21 @@ Historico tareas
     <div class="col">
         <div class="card">
             <div class="card-body">
-                <h1 class="card-title">Histórico de Tareas</h1>
-                <h3 class="card-subtitle">Total tareas ( <small> {{ totalRegistros || 16 }} </small> ) </h3>
+                <h1 class="card-title">Historical of Tasks</h1>
+                <h3 class="card-subtitle">Total tasks ( <small> {{ totalRegistros || 16 }} </small> ) </h3>
 
                 <table class="table table-hover table-striped table-responsive">
                     <thead>
                         <tr>
-                            <th>Usuario Asigando</th>
+                            <th>Assigned User</th>
                             <!-- quien -->
-                            <th>Formulario</th>
+                            <th>Form</th>
                             <!-- el que -->
-                            <th>Tipo</th>
+                            <th>Tipe</th>
                             <!-- donde -->
-                            <th>Realizado</th>
+                            <th>Realized</th>
                             <!-- cuando hizo -->
-                            <th>Validado</th>
+                            <th>Validated</th>
                             <!-- cuando ok -->
                             <th></th>
                         </tr>
@@ -252,15 +252,15 @@ Historico tareas
 
                                 <button [routerLink]="['/observacion/', observacion._id ]" class="btn btn-primary"
                                     style="margin: 10px">
-                                    <i class="fa fa-eye"> Abrir</i>
+                                    <i class="fa fa-eye"> Open</i>
                                 </button>
 
                             </td>
                         </tr>
                     </tbody>
                 </table>
-                <button (click)="cambiarDesde(-5, 'Pendiente Realizar')" class="btn btn-secondary">Anteriores</button>
-                <button (click)="cambiarDesde(5, 'Pendiente Realizar')" class="btn btn-secondary">Siguientes</button>
+                <button (click)="cambiarDesde(-5, 'Pendiente Realizar')" class="btn btn-secondary">Previous</button>
+                <button (click)="cambiarDesde(5, 'Pendiente Realizar')" class="btn btn-secondary">Next</button>
             </div>
         </div>
     </div>

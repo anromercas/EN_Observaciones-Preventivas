@@ -21,7 +21,7 @@
         <div class="row">
             <div class="col-sm-12 col-md-12 col-lg-12 ">
                 <div class="float-right">
-                    <app-barra-user-acciones></app-barra-user-acciones>
+                    <app-barra-user-acciones *ngIf="!esAdmin"></app-barra-user-acciones>
                 </div>
             </div>
         </div>

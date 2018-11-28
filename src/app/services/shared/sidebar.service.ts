@@ -9,9 +9,9 @@ export class SidebarService {
   menu: any = [
 
         /* { titulo: 'Inicio', icono: 'fa fa-home fa-10x', url: '/dashboard-user' }, */
-        { titulo: 'Calendario', icono: 'fa fa-calendar fa-10x', url: '/calendario' },
-        { titulo: 'Incidente', icono: 'fa fa-exclamation-triangle fa-10x', url: '/incidente' },
-        { titulo: 'Listado Formularios', icono: 'fa fa-list fa-10x', url: '/listado-formularios' },
+        { titulo: 'Calendar', icono: 'fa fa-calendar fa-10x', url: '/calendario' },
+        { titulo: 'Incident', icono: 'fa fa-exclamation-triangle fa-10x', url: '/incidente' },
+        { titulo: 'List Forms', icono: 'fa fa-list fa-10x', url: '/listado-formularios' },
 
   ];
   /* menu: any = [

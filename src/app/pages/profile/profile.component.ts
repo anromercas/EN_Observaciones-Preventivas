@@ -10,6 +10,7 @@ import { UsuarioService } from '../../services/usuario/usuario.service';
 export class ProfileComponent implements OnInit {
 
   usuario: Usuario;
+  clase: string = 'single-column';
 
   imagenSubir: File;
   imagenTemp: string;
@@ -21,6 +22,13 @@ export class ProfileComponent implements OnInit {
    }
 
   ngOnInit() {
+    this.usuario = JSON.parse( localStorage.getItem('usuario') );
+    // javascript nativo para que borre el estilo que hace que no tenga menú lateral la aplicación
+    if ( this.usuario.role === 'ADMIN_ROLE') {
+      $('body').addClass(this.clase);
+    } else {
+      $('body').removeClass(this.clase);
+    }
   }
 
 

@@ -13,6 +13,7 @@ export class PagesUserComponent implements OnInit {
 
   clase: string = 'single-column';
   usuario: Usuario;
+  esAdmin: boolean;
 
   constructor(public _usuarioService: UsuarioService) { }
 
@@ -20,7 +21,13 @@ export class PagesUserComponent implements OnInit {
     init_plugins();
     this.usuario = JSON.parse( localStorage.getItem('usuario') );
     // javascript nativo para que borre el estilo que hace que no tenga menú lateral la aplicación
+    if ( this.usuario.role === 'ADMIN_ROLE') {
+      $('body').addClass(this.clase);
+      this.esAdmin = true;
+    } else {
       $('body').removeClass(this.clase);
+      this.esAdmin = false;
+    }
   }
 
 }

@@ -20,7 +20,7 @@
         </li>
         <li class="nav-devider"></li> -->
         <!-- <li class="nav-medium-cap">PRINCIPAL</li> -->
-        <li routerLinkActive="active"> <a routerLink="/dashboard-user" > <i class="fa fa-home fa-10x"> </i> <span class="hide-menu" > Inicio</span> </a></li>
+        <li routerLinkActive="active"> <a routerLink="/dashboard-user" > <i class="fa fa-home fa-10x"> </i> <span class="hide-menu" > Main Menu</span> </a></li>
         <li *ngFor="let menu of _sidebar.menu" routerLinkActive="active">
             <a  [routerLink]="[ menu.url ]">
               <i [class]="menu.icono"></i>

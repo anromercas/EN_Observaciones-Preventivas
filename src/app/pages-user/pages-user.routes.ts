@@ -10,6 +10,7 @@ import { IncidenteComponent } from './incidente/incidente.component';
 import { ListadoFormulariosComponent } from './listado-formularios/listado-formularios.component';
 import { FormularioComponent } from '../components/observaciones-preventivas/formulario.component';
 import { EmergenciaComponent } from './emergencia/emergencia.component';
+import { ProfileComponent } from '../pages/profile/profile.component';
 
 
 
@@ -29,6 +30,7 @@ const pagesRoutes: Routes = [
             { path: 'listado-formularios', component: ListadoFormulariosComponent, data: { titulo: 'Listado Formularios' } },
             { path: 'formulario', component: FormularioComponent, data: { titulo: 'Formulario' } },
             { path: 'emergencia', component: EmergenciaComponent, data: { titulo: 'Emergencia' } },
+            { path: 'perfil', component: ProfileComponent, data: { titulo: 'Perfil de Usuario' } },
             { path: '', redirectTo: '/dashboard-user', pathMatch: 'full' },
         ]
     }

@@ -115,8 +115,8 @@ export class ObservacionComponent implements OnInit {
   borrarObservacion( observacion: ObservacionesPreventivas ) {
 
     swal({
-      title: '¿Está seguro?',
-      text: 'Está a punto de borrar una observación preventiva',
+      title: 'Are you sure?',
+      text: 'You are about to delete a preventive observation',
       icon: 'warning',
       buttons: true,
       dangerMode: true,

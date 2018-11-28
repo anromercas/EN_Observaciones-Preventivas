@@ -13,7 +13,7 @@ formulario Creación Observacion preventiva
 -->
 <div class="text-left">
     <button routerLink="/dashboard" type="button" class="btn btn-rounded btn-outline-primary">
-        <i class="fa fa-rotate-left"> Home</i>
+        <i class="fa fa-rotate-left"> Main Menu</i>
     </button>
 </div>
 <br>
@@ -22,7 +22,7 @@ formulario Creación Observacion preventiva
     <div class="col-md-12">
         <div class="card card-body bg-info text-white">
 
-            <h3 class="box-title m-b-0 card-title text-white">Modificcar Observacion Preventiva <small>Fecha: {{
+            <h3 class="box-title m-b-0 card-title text-white">Modify Preventive Observation <small>Date: {{
                     fechaHoy |
                     date:'dd/MM/yyyy' }} </small></h3>
             <br>
@@ -30,36 +30,36 @@ formulario Creación Observacion preventiva
             <form [formGroup]="forma" ngNativeValidate (ngSubmit)="guardarObservacion( observacion )">
                 <div class="row">
                     <div class="col-md-2">
-                        <label for="usuario">Usuario</label>
+                        <label for="usuario">User</label>
                         <select (change)="cambioUsuario( $event.target.value )" formControlName="usuario" name="estado"
                             class="form-control">
-                            <option value="">Seleccione Usuario</option>
+                            <option value="">Slect User</option>
                             <option *ngFor="let usuario of usuarios" [value]="usuario._id"> {{ usuario.nombre + ' ' +
                                 usuario.apellido + ' ' + usuario.segundoapellido }} </option>
                         </select>
                     </div>
                     <div class="col-md-2">
-                        <label for="formulario">Formulario</label>
+                        <label for="formulario">Form</label>
                         <select formControlName="formulario" name="estado" class="form-control">
-                            <option value="">-- selecciona una opción --</option>
-                            <option value="HORNO">HORNO</option>
-                            <option value="BARRIDO">BARRIDO</option>
-                            <option value="CALDERAS">CALDERAS</option>
-                            <option value="RECAUCHUTADO">RECAUCHUTADO</option>
+                            <option value="">-- Select a option --</option>
+                            <option value="OVEN">OVEN</option>
+                            <option value="SWEPT">SWEPT</option>
+                            <option value="BOILERS">BOILERS</option>
+                            <option value="RETREAD">RETREAD</option>
                         </select>
                     </div>
                     <div class="col-md-2">
-                        <label for="zona">Tipo</label>
+                        <label for="zona">Tipe</label>
                         <select formControlName="zona" name="zona" class="form-control">
-                            <option value="">-- selecciona una opción --</option>
-                            <option value="PARADA">PARADA</option>
-                            <option value="INSPECCION GENERAL">INSPECCION GENERAL</option>
-                            <option value="INSPECCION CORREA">INSPECCION CORREA</option>
+                            <option value="">-- Select a option --</option>
+                            <option value="STOP">STOP</option>
+                            <option value="GENERAL INSPECTION">GENERAL INSPECTION</option>
+                            <option value="BELT INSPECTION">BELT INSPECTION</option>
                         </select>
                     </div>
 
                     <div class="col-md-2">
-                        <label for="fecha">fecha</label>
+                        <label for="fecha">Date</label>
                         <div class="input-group date">
 
                             <input formControlName="fecha" type="date" name="fecha" class="form-control" [value]="fechaHoy | date:'dd/MM/yyyy'">
@@ -68,19 +68,19 @@ formulario Creación Observacion preventiva
                         </div>
                     </div>
                     <div class="col-md-2">
-                        <label for="estado">Repetición</label>
+                        <label for="estado">Repetition</label>
                         <select formControlName="repeticion" name="repeticion" class="form-control">
-                            <option value="">-- selecciona una opción --</option>
-                            <option value="DIARIO">DIARIO</option>
-                            <option value="SEMANAL">SEMANAL</option>
-                            <option value="MENSUAL">MENSUAL</option>
-                            <option value="ANUAL">ANUAL</option>
+                            <option value="">-- select a option --</option>
+                            <option value="DAILY">DAILY</option>
+                            <option value="WEEKLY">WEEKLY</option>
+                            <option value="MONTHLY">MONTHLY</option>
+                            <option value="ANNUAL">ANNUAL</option>
                         </select>
                     </div>
                     <div class="col-md-2">
                         <label for=""></label> <br>
                         <button type="submit" class="btn btn-primary">
-                            <i class="fa fa-save"> Guardar</i>
+                            <i class="fa fa-save"> Save</i>
                         </button>
                     </div>
                 </div>

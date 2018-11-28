@@ -55,7 +55,7 @@ export class ObservacionesPreventivasService {
 
     return this.http.put( url, observacion )
                     .map( () => {
-                        swal('Obsevación Preventiva validada', 'La Obsevación Preventiva ha sido validada correctamente', 'success');
+                        swal('Validated Preventive Observation', 'The Preventive Objection has been validated correctly', 'success');
                         return true;
                     });
   }
@@ -72,7 +72,7 @@ export class ObservacionesPreventivasService {
 
     return this.http.post( url, observacion )
                     .map( (resp: any) => {
-                      swal('Obsevación Preventiva creada!', 'Observación preventiva en la zona: ' + observacion.zona, 'success');
+                      swal('Preventive Observation created!', 'Preventive observation in the area: ' + observacion.zona, 'success');
                       return resp.observacion;
                     });
  }
@@ -83,7 +83,7 @@ export class ObservacionesPreventivasService {
 
     return this.http.put( url, observacion )
                     .map( (resp: any) => {
-                      swal('Obsevación Preventiva actualizada!', 'Observación preventiva en la zona: ' + observacion.zona, 'success');
+                      swal('Preventive Observation updated!', 'Preventive observation in the area: ' + observacion.zona, 'success');
                       return true;
                     });
   }
@@ -93,7 +93,7 @@ export class ObservacionesPreventivasService {
 
     return this.http.delete( url )
                     .map( () => {
-                        swal('Obsevación Preventiva borrado', 'La Obsevación Preventiva ha sido eliminado correctamente', 'success');
+                        swal('Preventive Observation deleted', 'The Preventive Objection has been correctly eliminated', 'success');
                         return true;
                     });
   }

@@ -1,4 +1,4 @@
-<div class="row">
+<div class="row" *ngIf="esAdmin">
     <div class="col-sm-12 col-md-12 col-lg-12 ">
         <app-barra-acciones></app-barra-acciones>
 
@@ -13,7 +13,7 @@
             <div class="row">
                 <div class="col-md-4">
                     <button type="submit" routerLink="/" class="btn btn-outline-danger btn-block">
-                        <i class="fa fa-rotate-left"> Salir</i>
+                        <i class="fa fa-rotate-left"> Exit</i>
                     </button>
                 </div>
                 <div class="col-md-4">
@@ -21,7 +21,7 @@
                 </div>
                 <div class="col-md-4">
                     <button type="submit" class="btn btn-primary btn-block">
-                        <i class="fa fa-save"> Guardar</i>
+                        <i class="fa fa-save"> Save</i>
                     </button>
                 </div>
 
@@ -35,29 +35,29 @@
                 <div class="row">
 
                     <div class="col-md-4">
-                        <label for="nombre">Nombre</label>
-                        <input type="text" name="nombre" class="form-control" placeholder="Nombre">
+                        <label for="nombre">Name</label>
+                        <input type="text" name="nombre" class="form-control" placeholder="Name">
                     </div>
 
                     <div class="col-md-4">
-                        <label for="fecha">fecha</label>
+                        <label for="fecha">Date</label>
                         <div class="input-group date">
                             <input type="date" name="fecha" class="form-control">
                         </div>
                     </div>
 
                     <div class="col-md-4">
-                        <label for="observador">observador</label>
-                        <input type="text" name="observador" class="form-control" placeholder="observador">
+                        <label for="observador">Observer</label>
+                        <input type="text" name="observador" class="form-control" placeholder="Observer">
                     </div>
 
                     <div class="col-md-4">
-                        <label for="puesto">Puesto</label>
-                        <input type="text" name="puesto" class="form-control" placeholder="Puesto">
+                        <label for="puesto">Place</label>
+                        <input type="text" name="puesto" class="form-control" placeholder="Place">
                     </div>
                     <div class="col-md-4">
-                        <label for="Zona">Zona</label>
-                        <input type="text" name="Zona" class="form-control" placeholder="Zona">
+                        <label for="Zona">Zone</label>
+                        <input type="text" name="Zona" class="form-control" placeholder="Zone">
                     </div>
 
                 </div>
@@ -67,20 +67,20 @@
     <div class="row">
         <div class="col-md-12">
             <div class="card card-body">
-                <h3 class="box-title m-b-0">1) Posición del trabajador</h3>
+                <h3 class="box-title m-b-0">1) Worker's position</h3>
                 <div class="btn-group align-self-end" role="group">
                     <button type="submit" class="btn btn-primary btn-rounded btn-lg">
-                        <i class="fa fa-camera"> Tomar foto</i>
+                        <i class="fa fa-camera"> Take photo</i>
                     </button>
                     <button type="submit" class="btn btn-warning btn-rounded btn-lg">
-                        <i class="fa fa-bell"> Alarma</i>
+                        <i class="fa fa-bell"> Alarm</i>
                     </button>
                 </div>
 
                 <div class="row">
                     <div class="col-sm-3">
                         <label class="btn">
-                            <img [ngClass]="{'check':seleccionado[0]}" (click)="seleccionado[0]=!seleccionado[0]" src="../../../assets/images/icon/golpeado.png"
+                            <img [ngClass]="{'check':seleccionado[0]}" (click)="seleccionado[0]=!seleccionado[0]" src="../../../assets/images/icon/golpeado.svg"
                                 alt="golpeado" class="icon-form">
                             <input type="checkbox" name="golpeado" id="golpeado" value="golpeado" class="hidden"
                                 autocomplete="off">
@@ -88,16 +88,7 @@
                     </div>
                     <div class="col-sm-3">
                         <label class="btn">
-                            <img [ngClass]="{'check':seleccionado[1]}" (click)="seleccionado[1]=!seleccionado[1]" src="../../../assets/images/icon/golpeandose.png"
-                                alt="golpeado" class="icon-form">
-                            <input type="checkbox" name="golpeado" id="golpeado" value="golpeado" class="hidden"
-                                autocomplete="off">
-                        </label>
-                    </div>
-
-                    <div class="col-sm-3">
-                        <label class="btn">
-                            <img [ngClass]="{'check':seleccionado[2]}" (click)="seleccionado[2]=!seleccionado[2]" src="../../../assets/images/icon/atrapado.png"
+                            <img [ngClass]="{'check':seleccionado[1]}" (click)="seleccionado[1]=!seleccionado[1]" src="../../../assets/images/icon/golpeandose.svg"
                                 alt="golpeado" class="icon-form">
                             <input type="checkbox" name="golpeado" id="golpeado" value="golpeado" class="hidden"
                                 autocomplete="off">
@@ -106,7 +97,7 @@
 
                     <div class="col-sm-3">
                         <label class="btn">
-                            <img [ngClass]="{'check':seleccionado[3]}" (click)="seleccionado[3]=!seleccionado[3]" src="../../../assets/images/icon/caidas.png"
+                            <img [ngClass]="{'check':seleccionado[2]}" (click)="seleccionado[2]=!seleccionado[2]" src="../../../assets/images/icon/atrapado.svg"
                                 alt="golpeado" class="icon-form">
                             <input type="checkbox" name="golpeado" id="golpeado" value="golpeado" class="hidden"
                                 autocomplete="off">
@@ -115,7 +106,7 @@
 
                     <div class="col-sm-3">
                         <label class="btn">
-                            <img [ngClass]="{'check':seleccionado[4]}" (click)="seleccionado[4]=!seleccionado[4]" src="../../../assets/images/icon/alta-temp.png"
+                            <img [ngClass]="{'check':seleccionado[3]}" (click)="seleccionado[3]=!seleccionado[3]" src="../../../assets/images/icon/caidas.svg"
                                 alt="golpeado" class="icon-form">
                             <input type="checkbox" name="golpeado" id="golpeado" value="golpeado" class="hidden"
                                 autocomplete="off">
@@ -124,7 +115,7 @@
 
                     <div class="col-sm-3">
                         <label class="btn">
-                            <img [ngClass]="{'check':seleccionado[5]}" (click)="seleccionado[5]=!seleccionado[5]" src="../../../assets/images/icon/corriente.png"
+                            <img [ngClass]="{'check':seleccionado[4]}" (click)="seleccionado[4]=!seleccionado[4]" src="../../../assets/images/icon/alta-temp.svg"
                                 alt="golpeado" class="icon-form">
                             <input type="checkbox" name="golpeado" id="golpeado" value="golpeado" class="hidden"
                                 autocomplete="off">
@@ -133,7 +124,7 @@
 
                     <div class="col-sm-3">
                         <label class="btn">
-                            <img [ngClass]="{'check':seleccionado[5]}" (click)="seleccionado[5]=!seleccionado[5]" src="../../../assets/images/icon/absorcion.png"
+                            <img [ngClass]="{'check':seleccionado[5]}" (click)="seleccionado[5]=!seleccionado[5]" src="../../../assets/images/icon/corriente.svg"
                                 alt="golpeado" class="icon-form">
                             <input type="checkbox" name="golpeado" id="golpeado" value="golpeado" class="hidden"
                                 autocomplete="off">
@@ -142,7 +133,7 @@
 
                     <div class="col-sm-3">
                         <label class="btn">
-                            <img [ngClass]="{'check':seleccionado[5]}" (click)="seleccionado[5]=!seleccionado[5]" src="../../../assets/images/icon/esfuerzo.png"
+                            <img [ngClass]="{'check':seleccionado[6]}" (click)="seleccionado[6]=!seleccionado[6]" src="../../../assets/images/icon/absorcion.svg"
                                 alt="golpeado" class="icon-form">
                             <input type="checkbox" name="golpeado" id="golpeado" value="golpeado" class="hidden"
                                 autocomplete="off">
@@ -151,7 +142,7 @@
 
                     <div class="col-sm-3">
                         <label class="btn">
-                            <img [ngClass]="{'check':seleccionado[5]}" (click)="seleccionado[5]=!seleccionado[5]" src="../../../assets/images/icon/ingestion.png"
+                            <img [ngClass]="{'check':seleccionado[7]}" (click)="seleccionado[7]=!seleccionado[7]" src="../../../assets/images/icon/esfuerzo.svg"
                                 alt="golpeado" class="icon-form">
                             <input type="checkbox" name="golpeado" id="golpeado" value="golpeado" class="hidden"
                                 autocomplete="off">
@@ -160,7 +151,16 @@
 
                     <div class="col-sm-3">
                         <label class="btn">
-                            <img [ngClass]="{'check':seleccionado[5]}" (click)="seleccionado[5]=!seleccionado[5]" src="../../../assets/images/icon/inhalacion.png"
+                            <img [ngClass]="{'check':seleccionado[8]}" (click)="seleccionado[8]=!seleccionado[8]" src="../../../assets/images/icon/ingestion.svg"
+                                alt="golpeado" class="icon-form">
+                            <input type="checkbox" name="golpeado" id="golpeado" value="golpeado" class="hidden"
+                                autocomplete="off">
+                        </label>
+                    </div>
+
+                    <div class="col-sm-3">
+                        <label class="btn">
+                            <img [ngClass]="{'check':seleccionado[9]}" (click)="seleccionado[9]=!seleccionado[9]" src="../../../assets/images/icon/inhalacion.svg"
                                 alt="golpeado" class="icon-form">
                             <input type="checkbox" name="golpeado" id="golpeado" value="golpeado" class="hidden"
                                 autocomplete="off">
@@ -174,11 +174,11 @@
     <div class="row">
         <div class="col-md-6">
             <div class="card card-body">
-                <h3 class="card-title">2) Equipos Protección Individual</h3>
-                <h4 class="card-title">2.1) Seleccionar parte del cuerpo dañada</h4>
+                <h3 class="card-title">2) Personal Protection Equipment</h3>
+                <h4 class="card-title">2.1) Select part of the damaged body</h4>
                 <div class="btn-group align-self-end" role="group">
                     <button type="submit" class="btn btn-primary btn-rounded btn-lg">
-                        <i class="fa fa-camera"> Tomar foto</i>
+                        <i class="fa fa-camera"> Take photo</i>
                     </button>
                     <!-- <button type="submit" class="btn btn-warning btn-rounded btn-lg">
                             <i class="fa fa-bell"> Alarma</i>
@@ -189,14 +189,14 @@
                     <!-- <angular-maphilight id="avatarmap" angular-maphilight-config="config"> -->
                         <img src="../../../assets/images/icon/avatar.png" id="avatar" alt="avatar" class="img-avatar"
                             usemap="#avatarmap">
-                        <map>
+                        <!-- <map>
                             <area shape="rect" class="area" coords="0,0,100,200" [ngClass]="{'avatar-select':avatar[0]}" (click)="avatar[0]=!avatar[0]"
                                 alt="Ojos">
                             <area shape="rect" coords="712,334,771,399" [ngClass]="{'avatar-select':avatar[1]}" (click)="avatar[1]=!avatar[1]"
                                 alt="Boca">
                             <area shape="rect" coords="1080,489,913,296" [ngClass]="{'avatar-select':avatar[2]}"
                                 (click)="avatar[2]=!avatar[2]" alt="mano-izquierda">
-                        </map>
+                        </map> -->
                     <!-- </angular-maphilight> -->
                 </div>
             </div>
@@ -204,10 +204,10 @@
 
         <div class="col-md-6">
             <div class="card card-body">
-                <h4 class="card-title">2.2) Seleccionar EPI que lleva puesto</h4>
+                <h4 class="card-title">2.2) Select PPE that you wear</h4>
                 <div class="btn-group align-self-end" role="group">
                     <button type="submit" class="btn btn-primary btn-rounded btn-lg">
-                        <i class="fa fa-camera"> Tomar foto</i>
+                        <i class="fa fa-camera"> Take photo</i>
                     </button>
                     <!-- <button type="submit" class="btn btn-warning btn-rounded btn-lg">
                             <i class="fa fa-bell"> Alarma</i>
@@ -216,39 +216,39 @@
                 <br>
                 <div class="row">
                     <div class="col-sm-4 col-md-4">
-                        <img [ngClass]="{'check':epis[0]}" (click)="epis[0]=!epis[0]" src="../../../assets/images/icon/epis/Recurso-3.png"
+                        <img [ngClass]="{'check':epis[0]}" (click)="epis[0]=!epis[0]" src="../../../assets/images/icon/epis/Recurso-3.svg"
                             alt="avatar" class="icon-form">
                     </div>
                     <div class="col-sm-4 col-md-4">
-                        <img [ngClass]="{'check':epis[1]}" (click)="epis[1]=!epis[1]" src="../../../assets/images/icon/epis/Recurso-4.png"
+                        <img [ngClass]="{'check':epis[1]}" (click)="epis[1]=!epis[1]" src="../../../assets/images/icon/epis/Recurso-4.svg"
                             alt="avatar" class="icon-form">
                     </div>
                     <div class="col-sm-4 col-md-4">
-                        <img [ngClass]="{'check':epis[2]}" (click)="epis[2]=!epis[2]" src="../../../assets/images/icon/epis/Recurso-5.png"
+                        <img [ngClass]="{'check':epis[2]}" (click)="epis[2]=!epis[2]" src="../../../assets/images/icon/epis/Recurso-5.svg"
                             alt="avatar" class="icon-form">
                     </div>
                     <div class="col-sm-4 col-md-4">
-                        <img [ngClass]="{'check':epis[3]}" (click)="epis[3]=!epis[3]" src="../../../assets/images/icon/epis/Recurso-6.png"
+                        <img [ngClass]="{'check':epis[3]}" (click)="epis[3]=!epis[3]" src="../../../assets/images/icon/epis/Recurso-6.svg"
                             alt="avatar" class="icon-form">
                     </div>
                     <div class="col-sm-4 col-md-4">
-                        <img [ngClass]="{'check':epis[4]}" (click)="epis[4]=!epis[4]" src="../../../assets/images/icon/epis/Recurso-7.png"
+                        <img [ngClass]="{'check':epis[4]}" (click)="epis[4]=!epis[4]" src="../../../assets/images/icon/epis/Recurso-7.svg"
                             alt="avatar" class="icon-form">
                     </div>
                     <div class="col-sm-4 col-md-4">
-                        <img [ngClass]="{'check':epis[5]}" (click)="epis[5]=!epis[5]" src="../../../assets/images/icon/epis/Recurso-8.png"
+                        <img [ngClass]="{'check':epis[5]}" (click)="epis[5]=!epis[5]" src="../../../assets/images/icon/epis/Recurso-8.svg"
                             alt="avatar" class="icon-form">
                     </div>
                     <div class="col-sm-4 col-md-4">
-                        <img [ngClass]="{'check':epis[6]}" (click)="epis[6]=!epis[6]" src="../../../assets/images/icon/epis/Recurso-9.png"
+                        <img [ngClass]="{'check':epis[6]}" (click)="epis[6]=!epis[6]" src="../../../assets/images/icon/epis/Recurso-9.svg"
                             alt="avatar" class="icon-form">
                     </div>
                     <div class="col-sm-4 col-md-4">
-                        <img [ngClass]="{'check':epis[7]}" (click)="epis[7]=!epis[7]" src="../../../assets/images/icon/epis/Recurso-10.png"
+                        <img [ngClass]="{'check':epis[7]}" (click)="epis[7]=!epis[7]" src="../../../assets/images/icon/epis/Recurso-10.svg"
                             alt="avatar" class="icon-form">
                     </div>
                     <div class="col-sm-3 col-md-4">
-                        <img [ngClass]="{'check':epis[8]}" (click)="epis[8]=!epis[8]" src="../../../assets/images/icon/epis/Recurso-11.png"
+                        <img [ngClass]="{'check':epis[8]}" (click)="epis[8]=!epis[8]" src="../../../assets/images/icon/epis/Recurso-11.svg"
                             alt="avatar" class="icon-form">
                     </div>
                 </div>
@@ -262,7 +262,7 @@
             <div class=" card card-body">
                 <div class="btn-group align-self-end" role="group">
                     <button type="submit" class="btn btn-primary btn-rounded btn-lg">
-                        <i class="fa fa-camera"> Tomar foto</i>
+                        <i class="fa fa-camera"> Take photo</i>
                     </button>
                     <!-- <button type="submit" class="btn btn-warning btn-rounded btn-lg">
                                 <i class="fa fa-bell"> Alarma</i>
@@ -272,77 +272,77 @@
                     <table class="table table-striped">
                         <thead>
                             <tr>
-                                <th>Actos Inseguros</th>
-                                <th>Descripcion de la situacion detectada</th>
-                                <th>consecuencia</th>
-                                <th class="text-nowrap">Alcance</th>
+                                <th>Unsafe acts</th>
+                                <th>Description of the situation detected</th>
+                                <th>consequence</th>
+                                <th class="text-nowrap">Scope</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
-                                <td>¿Conoce las 7 Reglas Cardinales de Seguridad? ¿Cuales son? ¿Sabrías
-                                    localizarlas en tu ordenador?</td>
+                                <td>Do you know the 7 Cardinal Security Rules? Which are? You'd know
+                                                                         locate them on your computer?</td>
                                 <td>
-                                    <input type="text" name="descripcion-reglas-cardinales" placeholder="Descripcion de la situacion detectada">
+                                    <input type="text" name="descripcion-reglas-cardinales" placeholder="Description of the situation detected">
                                 </td>
                                 <td>
                                     <input type="text" name="consecuencia-reglas-cardinales" placeholder="Consecuencia">
 
                                 </td>
                                 <td class="text-nowrap">
-                                    <input type="text" name="alcance-reglas-cardinales" placeholder="Alcance">
+                                    <input type="text" name="alcance-reglas-cardinales" placeholder="Scope">
                                 </td>
                             </tr>
                             <tr>
-                                <td>Realización de tareas a ritmo inadeacuado (correr)</td>
+                                <td>Performing tasks at an inappropriate pace (running)</td>
                                 <td>
-                                    <input type="text" name="descripcion-correr" placeholder="Descripcion de la situacion detectada">
+                                    <input type="text" name="descripcion-correr" placeholder="Description of the situation detected">
                                 </td>
                                 <td>
-                                    <input type="text" name="consecuencia-correr" placeholder="Consecuencia">
+                                    <input type="text" name="consecuencia-correr" placeholder="Consequence">
 
                                 </td>
                                 <td class="text-nowrap">
-                                    <input type="text" name="alcance-correr" placeholder="Alcance">
+                                    <input type="text" name="alcance-correr" placeholder="Scope">
                                 </td>
                             </tr>
                             <tr>
-                                <td>Levantar cargas manualmente de forma incorrecta</td>
+                                <td>Lifting loads manually incorrectly</td>
                                 <td>
-                                    <input type="text" name="descripcion-levantar-cargas" placeholder="Descripcion de la situacion detectada">
+                                    <input type="text" name="descripcion-levantar-cargas" placeholder="Description of the situation detected">
                                 </td>
                                 <td>
-                                    <input type="text" name="consecuencia-levantar-cargas" placeholder="Consecuencia">
+                                    <input type="text" name="consecuencia-levantar-cargas" placeholder="Consequence">
 
                                 </td>
                                 <td class="text-nowrap">
-                                    <input type="text" name="alcance-levantar-cargas" placeholder="Alcance">
+                                    <input type="text" name="alcance-levantar-cargas" placeholder="Scope">
                                 </td>
                             </tr>
                             <tr>
-                                <td>Adoptar una posición incorrecta en el puesto</td>
+                                <td>Adopt an incorrect position in the position</td>
                                 <td>
-                                    <input type="text" name="descripcion-posicion-incorreta" placeholder="Descripcion de la situacion detectada">
+                                    <input type="text" name="descripcion-posicion-incorreta" placeholder="Description of the situation detected">
                                 </td>
                                 <td>
-                                    <input type="text" name="consecuencia-posicion-incorreta" placeholder="Consecuencia">
+                                    <input type="text" name="consecuencia-posicion-incorreta" placeholder="Consequence">
 
                                 </td>
                                 <td class="text-nowrap">
-                                    <input type="text" name="alcance-posicion-incorreta" placeholder="Alcance">
+                                    <input type="text" name="alcance-posicion-incorreta" placeholder="Scope">
                                 </td>
                             </tr>
                             <tr>
-                                <td>Falta de coordinación en operaciones conjuntas</td>
+                                <td>Lack of coordination in joint operations</td>
                                 <td>
-                                    <input type="text" name="descripcion-coordinacion" placeholder="Descripcion de la situacion detectada">
+                                    <input type="text" name="descripcion-coordinacion" placeholder="Description of the situation detected">
                                 </td>
                                 <td>
-                                    <input type="text" name="consecuencia-coordinacion" placeholder="Consecuencia">
+                                    <input type="text" name="consecuencia-coordinacion" placeholder="Consequence">
 
                                 </td>
                                 <td class="text-nowrap">
-                                    <input type="text" name="alcance-coordinacion" placeholder="Alcance">
+                                    <input type="text" name="alcance-coordinacion" placeholder="Scope">
                                 </td>
                             </tr>
                         </tbody>

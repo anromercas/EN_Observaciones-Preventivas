@@ -15,11 +15,11 @@ export class ProcedimientosComponent implements OnInit {
   active: number = 0;
 
   imagenes: any = [
-    {nombre: 'Cras justo odio', url: '../../../assets/images/infograma.jpg'},
-    {nombre: 'Dapibus ac facilisis in', url: '../../../assets/images/infograma2.jpg'},
-    {nombre: 'Morbi leo risus', url: '../../../assets/images/infograma3.jpg'},
-    {nombre: 'Porta ac consectetur ac', url: '../../../assets/images/infograma4.jpg'},
-    {nombre: 'Vestibulum at eros', url: '../../../assets/images/infograma5.jpg'},
+    {nombre: 'Cras justo odio', url: '../../../assets/images/infograma.svg'},
+    {nombre: 'Dapibus ac facilisis in', url: '../../../assets/images/infograma2.svg'},
+    {nombre: 'Morbi leo risus', url: '../../../assets/images/infograma3.svg'},
+    {nombre: 'Porta ac consectetur ac', url: '../../../assets/images/infograma4.svg'},
+    {nombre: 'Vestibulum at eros', url: '../../../assets/images/infograma5.svg'},
   ];
 
   constructor(public _usuarioService: UsuarioService) { }

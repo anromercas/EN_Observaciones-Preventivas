@@ -157,7 +157,8 @@ export class ObservacionesPreventivasComponent implements OnInit {
   }
 
   aprobarObservacion( observacion: ObservacionesPreventivas ) {
-    swal('Observacion Preventiva Validada', 'Se ha validado la observación: ' + observacion.formulario, 'success');
+    swal('Validated Preventive Observation', 'The Preventive Objection ' + observacion.formulario + ' has been validated correctly', 'success');
+
    // console.log('Tarea con id: ' + observacion._id + 'en zona: ' + observacion.zona + ' validada');
     /* this._observacionesService.validarObservacion( observacion )
                                 .subscribe((resp)=> {
@@ -240,14 +241,14 @@ export class ObservacionesPreventivasComponent implements OnInit {
 
 
   recordatorio( nombre: string, apellido: string) {
-    swal('Recordatorio enviado', 'recordatorio enviado al usuario: ' + nombre + ' ' + apellido, 'success');
+    swal('Reminder sent', 'reminder sent to the user: ' + nombre + ' ' + apellido, 'success');
   }
 
   rechazarObservacion( observacion: ObservacionesPreventivas ) {
 
     swal({
-      title: '¿Está seguro?',
-      text: 'Está a punto de rechazar una observación preventiva',
+      title: 'Are you sure?',
+      text: 'You are about to reject a preventive observation',
       icon: 'warning',
       buttons: true,
       dangerMode: true,

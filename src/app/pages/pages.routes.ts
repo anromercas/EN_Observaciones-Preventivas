@@ -21,7 +21,7 @@ const pagesRoutes: Routes = [
         canActivate: [ AdminGuard ],
         children: [
             { path: 'dashboard', component: DashboardComponent, data: { titulo: 'Tablero' } },
-            { path: 'perfil', component: ProfileComponent, data: { titulo: 'Perfil de Usuario' } },
+         //   { path: 'perfil', component: ProfileComponent, data: { titulo: 'Perfil de Usuario' } },
             { path: 'usuarios', component: UsuariosComponent, data: { titulo: 'Mantenimiento de Usuarios' } },
             { path: 'observaciones', component: ObservacionesPreventivasComponent, data: { titulo: 'Observaciones Preventivas' } },
             { path: 'mis-observaciones', component: MisObservacionesComponent, data: { titulo: 'Mis Observaciones Preventivas' } },

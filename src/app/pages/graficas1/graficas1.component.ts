@@ -11,10 +11,10 @@ export class Graficas1Component implements OnInit {
 
   graficos: any = {
     'grafico1': {
-      'labels': ['Pendiente Realizar', 'Pendiente Aprobación', 'Aceptada', 'Caducada', ],
+      'labels': ['Pending to perform', 'Pending Approval', 'Accepted', 'expired', ],
       'data':  [24, 30, 46, 15],
       'type': 'doughnut',
-      'leyenda': 'Total Tareas'
+      'leyenda': 'Total Tasks'
     },
     'grafico2': {
       'labels': ['Hombres', 'Mujeres'],
