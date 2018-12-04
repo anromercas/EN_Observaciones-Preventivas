@@ -10,7 +10,7 @@ export class SidebarService {
 
         /* { titulo: 'Inicio', icono: 'fa fa-home fa-10x', url: '/dashboard-user' }, */
         { titulo: 'Calendar', icono: 'fa fa-calendar fa-10x', url: '/calendario' },
-        { titulo: 'Incident', icono: 'fa fa-exclamation-triangle fa-10x', url: '/incidente' },
+ //       { titulo: 'Incident', icono: 'fa fa-exclamation-triangle fa-10x', url: '/incidente' },
         { titulo: 'List Forms', icono: 'fa fa-list fa-10x', url: '/listado-formularios' },
 
   ];

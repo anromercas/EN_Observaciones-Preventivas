@@ -19,12 +19,25 @@
         <!-- ============================================================== -->
 
         <div class="row">
+          
             <div class="col-sm-12 col-md-12 col-lg-12 ">
                 <div class="float-right">
                     <app-barra-user-acciones *ngIf="!esAdmin"></app-barra-user-acciones>
                 </div>
             </div>
         </div>
+
+        <div class="row" *ngIf="!esAdmin">
+          <div class="col-12">
+            <div class="float-left">
+                <div class="btn-group" role="group">
+                    <button type="button" [routerLink]="['/procedimientos']" class="btn btn-secondary btn-rounded "> <i class="fa fa-cogs"> Procedures</i></button>
+                    <button type="button" [routerLink]="['/mini-formacion']" class="btn btn-secondary btn-rounded "><i class="fa fa-info-circle"> Mini-Training</i></button>
+                </div>
+            </div>
+          </div>
+        </div>
+
         <br>
         
         <router-outlet></router-outlet>

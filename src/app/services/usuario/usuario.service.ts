@@ -88,7 +88,7 @@ export class UsuarioService {
 
       return this.http.post( url, usuario )
                       .map( (resp: any) => {
-                        swal('Usuario creado!', usuario.email, 'success');
+                        swal('Created user!', usuario.email, 'success');
                         return resp.usuario;
                       });
    }
@@ -104,7 +104,7 @@ export class UsuarioService {
                         let usuarioDB: Usuario = resp.usuario;
                         this.guardarStorage( usuarioDB._id, this.token, usuarioDB );
                       }
-                      swal('Usuario actualizado!', usuario.nombre + ' ' + usuario.apellido, 'success');
+                      swal('Updated user!', usuario.nombre + ' ' + usuario.apellido, 'success');
                       return true;
                     });
   }
@@ -113,7 +113,7 @@ export class UsuarioService {
       this._subirArchivoService.subirArchivo( archivo, 'usuarios', id )
                                 .then( (resp: any) => {
                                   this.usuario.img = resp.usuario.img;
-                                  swal( 'Imagen Actualizada', this.usuario.nombre, 'success' );
+                                  swal( 'Updated Image', this.usuario.nombre, 'success' );
                                   this.guardarStorage( id, this.token, this.usuario );
                                   console.log(resp);
                                 })
@@ -139,7 +139,7 @@ export class UsuarioService {
 
     return this.http.delete( url )
                     .map( () => {
-                        swal('Usuario borrado', 'El usuario ha sido eliminado correctamente', 'success');
+                        swal('User deleted', 'The user has been successfully deleted', 'success');
                         return true;
                     });
   }
