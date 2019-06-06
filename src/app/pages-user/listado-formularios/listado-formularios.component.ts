@@ -11,11 +11,11 @@ export class ListadoFormulariosComponent implements OnInit {
   active: number = 0;
 
   formularios: any = [
-    {nombre: 'Cras justo odio', url: '/formulario'},
-    {nombre: 'Dapibus ac facilisis in', url: '/mini-formacion'},
-    {nombre: 'Vestibulum at eros', url: '/incidente'},
-    {nombre: 'Morbi leo risus', url: '/procedimientos'},
-    {nombre: 'Porta ac consectetur ac', url: '/calendario'},
+    {nombre: 'Incident investigation', url: '/formulario', icon: 'fa fa-info'},
+    {nombre: 'Boiler Maintenance', url: '/formulario1', icon: 'fa fa-building'},
+    {nombre: 'Report Near Misses', url: '/formulario2', icon: 'fa fa-bug'},
+    {nombre: 'General inspection', url: '/formulario3', icon: 'fa fa-cubes'},
+    {nombre: 'Confined Space Entry', url: '/formulario4', icon: 'fa fa-group'},
   ];
 
   constructor() { }

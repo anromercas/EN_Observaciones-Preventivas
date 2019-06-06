@@ -1,4 +1,3 @@
-
 <!-- 
 =====================================================================
 Total tareas 
@@ -28,8 +27,7 @@ Total tareas
         <div class="card">
             <div class="card-body">
 
-                <input (keyup)="buscarObservacionPendienteRealizar( input.value )" #input type="text" class="form-control"
-                    placeholder="Search task...">
+                <input (keyup)="buscarObservacionPendienteRealizar( input.value )" #input type="text" class="form-control" placeholder="Search task...">
 
             </div>
         </div>
@@ -39,11 +37,11 @@ Total tareas
 <div class="row animated bounceInRight" *ngIf="cargando">
     <div class="col">
         <div class="alert alert-warning text-center">
-            <strong>Cargando</strong>
+            <strong>Loading</strong>
             <br>
             <i class="fa fa-refresh fa-spin fa-2x"></i>
             <br>
-            <span>Espere por favor</span>
+            <span>Please wait</span>
         </div>
     </div>
 </div>
@@ -70,18 +68,15 @@ Total tareas
                         <tr *ngFor="let observacion of observaciones">
                             <td> {{ observacion.fecha | date:'dd/MM/yyyy' }} </td>
                             <td class="badge badge-danger"> Expired </td>
-                            <td> {{ observacion.usuario.nombre + ' ' + observacion.usuario.apellido + ' ' +
-                                observacion.usuario.segundoapellido }} </td>
+                            <td> {{ observacion.usuario.nombre + ' ' + observacion.usuario.apellido + ' ' + observacion.usuario.segundoapellido }} </td>
                             <td> {{ observacion.formulario }} </td>
                             <td> {{ observacion.zona }} </td>
                             <td>
-                                <button (click)="recordatorio( observacion.usuario.nombre, observacion.usuario.apellido )"
-                                    type="submit" class="btn btn-warning" style="margin: 10px">
+                                <button (click)="recordatorio( observacion.usuario.nombre, observacion.usuario.apellido )" type="submit" class="btn btn-warning" style="margin: 10px">
                                     <i class="fa fa-envelope-open-o"> Reminder</i>
                                 </button>
 
-                                <button [routerLink]="['/modificar-op/', observacion._id ]" class="btn btn-primary"
-                                    style="margin: 10px">
+                                <button [routerLink]="['/modificar-op/', observacion._id ]" class="btn btn-primary" style="margin: 10px">
                                     <i class="fa fa-refresh"> Re asign</i>
                                 </button>
 
@@ -109,8 +104,7 @@ Total tareas Pendiente Aprobacion
         <div class="card">
             <div class="card-body">
 
-                <input (keyup)="buscarObservacionPendienteRealizar( input.value )" #input type="text" class="form-control"
-                    placeholder="Search task...">
+                <input (keyup)="buscarObservacionPendienteRealizar( input.value )" #input type="text" class="form-control" placeholder="Search task...">
 
             </div>
         </div>
@@ -153,9 +147,7 @@ Total tareas Pendiente Aprobacion
                         <tr *ngFor="let observacionPendienteAprobacion of observaciones">
                             <td> {{ observacionPendienteAprobacion.fecha | date:'dd/MM/yyyy' }} </td>
                             <td class="badge badge-primary"> {{ observacionPendienteAprobacion.estado }} </td>
-                            <td> {{ observacionPendienteAprobacion.usuario.nombre + ' ' +
-                                observacionPendienteAprobacion.usuario.apellido + ' ' +
-                                observacionPendienteAprobacion.usuario.segundoapellido }} </td>
+                            <td> {{ observacionPendienteAprobacion.usuario.nombre + ' ' + observacionPendienteAprobacion.usuario.apellido + ' ' + observacionPendienteAprobacion.usuario.segundoapellido }} </td>
                             <td> {{ observacionPendienteAprobacion.formulario }} </td>
                             <td> {{ observacionPendienteAprobacion.zona }} </td>
                             <td>
@@ -165,13 +157,11 @@ Total tareas Pendiente Aprobacion
                                     </button>
 
 
-                                    <button (click)="aprobarObservacion( observacionPendienteAprobacion )" type="submit"
-                                        class="btn btn-success">
+                                    <button (click)="aprobarObservacion( observacionPendienteAprobacion )" type="submit" class="btn btn-success">
                                         <i class="fa fa-check"> Validate</i>
                                     </button>
 
-                                    <button (click)="rechazarObservacion( observacionPendienteAprobacion )" type="submit"
-                                        class="btn btn-danger" style="margin: 2px">
+                                    <button (click)="rechazarObservacion( observacionPendienteAprobacion )" type="submit" class="btn btn-danger" style="margin: 2px">
                                         <i class="fa fa-window-close"> Reject</i>
                                     </button>
                                 </div>
@@ -197,8 +187,7 @@ Historico tareas
         <div class="card">
             <div class="card-body">
 
-                <input (keyup)="buscarObservacionPendienteRealizar( input.value )" #input type="text" class="form-control"
-                    placeholder="Search task...">
+                <input (keyup)="buscarObservacionPendienteRealizar( input.value )" #input type="text" class="form-control" placeholder="Search task...">
 
             </div>
         </div>
@@ -242,16 +231,14 @@ Historico tareas
                     </thead>
                     <tbody>
                         <tr *ngFor="let observacion of observaciones">
-                            <td> {{ observacion.usuario.nombre + ' ' + observacion.usuario.apellido + ' ' +
-                                observacion.usuario.segundoapellido }} </td>
+                            <td> {{ observacion.usuario.nombre + ' ' + observacion.usuario.apellido + ' ' + observacion.usuario.segundoapellido }} </td>
                             <td> {{ observacion.formulario }} </td>
                             <td> {{ observacion.zona }} </td>
                             <td> {{ observacion.fechacreacion | date:'dd/MM/yyyy' }} </td>
                             <td> {{ observacion.fecha | date:'dd/MM/yyyy' }} </td>
                             <td>
 
-                                <button [routerLink]="['/observacion/', observacion._id ]" class="btn btn-primary"
-                                    style="margin: 10px">
+                                <button [routerLink]="['/observacion/', observacion._id ]" class="btn btn-primary" style="margin: 10px">
                                     <i class="fa fa-eye"> Open</i>
                                 </button>
 

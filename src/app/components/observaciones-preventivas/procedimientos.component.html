@@ -13,32 +13,24 @@
 
     <div class="col-lg-12 col-xlg-12 col-md-12 col-sm-12">
         <div class="stickyside">
-          <div class="list-group" id="top-menu">
-            <nav class="navbar navbar-expand-lg navbar-light bg-light">
-              <a class="navbar-brand">Procedures</a>
-              <button
-                class="navbar-toggler"
-                type="button"
-                data-toggle="collapse"
-                data-target="#navbarSupportedContent"
-                aria-controls="navbarSupportedContent"
-                aria-expanded="false"
-                aria-label="Toggle navigation"
-              >
+            <div class="list-group" id="top-menu">
+                <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                    <a class="navbar-brand">Procedures</a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
               </button>
-    
-              <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                  <li class="list-group-item" *ngFor="let imagen of imagenes let i = index" [class.active]="active === i">
-                      <a (click)="cambiarImagen(imagen.url, i)" class="pointer"> {{ imagen.nombre }} </a>  </li>
-              </div>
-            </nav>
-          </div>
+
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <li class="list-group-item" *ngFor="let imagen of imagenes let i = index" [class.active]="active === i">
+                            <a (click)="cambiarImagen(imagen.url, i)" class="pointer"><i [class]="imagen.icon"></i> {{ imagen.nombre }} </a> </li>
+                    </div>
+                </nav>
+            </div>
         </div>
-      </div>
-  <div class="col-lg-12 col-xlg-12 col-md-12 col-sm-12 ">
-    <div class="card card-body">
-        <img [src]="imagenUrl" alt="" class="img-procedimientos">
     </div>
-  </div>
+    <div class="col-lg-12 col-xlg-12 col-md-12 col-sm-12 ">
+        <div class="card card-body">
+            <img [src]="imagenUrl" alt="" class="img-procedimientos">
+        </div>
+    </div>
 </div>

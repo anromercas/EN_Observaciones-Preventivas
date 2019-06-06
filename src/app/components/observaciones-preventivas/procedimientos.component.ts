@@ -15,11 +15,11 @@ export class ProcedimientosComponent implements OnInit {
   active: number = 0;
 
   imagenes: any = [
-    {nombre: 'Cras justo odio', url: '../../../assets/images/infograma.svg'},
-    {nombre: 'Dapibus ac facilisis in', url: '../../../assets/images/infograma2.svg'},
-    {nombre: 'Morbi leo risus', url: '../../../assets/images/infograma3.svg'},
-    {nombre: 'Porta ac consectetur ac', url: '../../../assets/images/infograma4.svg'},
-    {nombre: 'Vestibulum at eros', url: '../../../assets/images/infograma5.svg'},
+    {nombre: 'Incident investigation', url: '../../../assets/images/infograma.svg', icon: 'fa fa-info'},
+    {nombre: 'Boiler Maintenance', url: '../../../assets/images/infograma2.svg', icon: 'fa fa-building'},
+    {nombre: 'Report Near Misses', url: '../../../assets/images/infograma3.svg', icon: 'fa fa-bug'},
+    {nombre: 'General inspection', url: '../../../assets/images/infograma4.svg', icon: 'fa fa-cubes'},
+    {nombre: 'Confined Space Entry', url: '../../../assets/images/infograma5.svg', icon: 'fa fa-group'},
   ];
 
   constructor(public _usuarioService: UsuarioService) { }

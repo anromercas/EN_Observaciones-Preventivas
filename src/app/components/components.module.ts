@@ -25,6 +25,10 @@ import { AgmCoreModule } from '@agm/core';
 import { ChartsModule } from 'ng2-charts';
 import { PipesModule } from '../pipes/pipes.module';
 import { SharedModule } from '../shared/shared.module';
+import { Formulario1Component } from './formulariosDemo/formulario1/formulario1.component';
+import { Formulario2Component } from './formulariosDemo/formulario2/formulario2.component';
+import { Formulario3Component } from './formulariosDemo/formulario3/formulario3.component';
+import { Formulario4Component } from './formulariosDemo/formulario4/formulario4.component';
 
 
 
@@ -42,7 +46,11 @@ import { SharedModule } from '../shared/shared.module';
         MisObservacionesComponent,
         ModificarObservacionComponent,
         ObservacionComponent,
-        ProcedimientosComponent
+        ProcedimientosComponent,
+        Formulario1Component,
+        Formulario2Component,
+        Formulario3Component,
+        Formulario4Component
     ],
     imports: [
         CommonModule,
@@ -67,7 +75,11 @@ import { SharedModule } from '../shared/shared.module';
         MisObservacionesComponent,
         ModificarObservacionComponent,
         ObservacionComponent,
-        ProcedimientosComponent
+        ProcedimientosComponent,
+        Formulario1Component,
+        Formulario2Component,
+        Formulario3Component,
+        Formulario4Component
     ],
     providers: []
 

@@ -17,11 +17,11 @@ export class MiniFormacionComponent implements OnInit {
   active: number = 0;
 
   videos: any = [
-    {nombre: 'Cras justo odio', url: '9oGKf-zr9M0'},
-    {nombre: 'Dapibus ac facilisis in', url: 'MSI3ZaY6Ll4'},
-    {nombre: 'Morbi leo risus', url: 'mEq8t0p-CaA'},
-    {nombre: 'Porta ac consectetur ac', url: 'zx6XCKUlX8g'},
-    {nombre: 'Vestibulum at eros', url: 'IRHxOx2J47Y'},
+    {nombre: 'Incident investigation', url: '9oGKf-zr9M0', icon: 'fa fa-info'},
+    {nombre: 'Boiler Maintenance', url: 'MSI3ZaY6Ll4', icon: 'fa fa-building'},
+    {nombre: 'Report Near Misses', url: 'mEq8t0p-CaA', icon: 'fa fa-bug'},
+    {nombre: 'General inspection', url: 'zx6XCKUlX8g', icon: 'fa fa-cubes'},
+    {nombre: 'Confined Space Entry', url: 'IRHxOx2J47Y', icon: 'fa fa-group'},
   ];
 
   constructor(public _usuarioService: UsuarioService) { }

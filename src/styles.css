@@ -58,6 +58,41 @@ agm-map {
   background-size: 100%;
 }
 
+/* Imagen utilizada en pantallas de anchura 320 px y superior */
+
+
+@media (min-width: 320px) {
+  #bg-principal {
+    background: url("./assets/images/background/fondo-principal-480w.png") !important;
+    background-repeat: no-repeat !important;
+    height: 360px !important;
+    width: 320px !important;
+  }
+
+  .login-box {
+    width: 320px !important;
+    overflow: scroll;
+    margin: 0 auto; }
+
+  .img-procedimientos {
+    height: 360px !important;
+    width: 320px !important;
+  }
+  
+  .img-icon {
+    height: 50px !important;
+  }
+  .img-register {
+    height: 100px !important;
+  }
+  .img-avatar {
+    height: 500px !important;
+  }
+  .icon-form {
+    width: 100px;
+  }
+}
+
 
 /* Imagen utilizada en pantallas de anchura 480 px y superior */
 
